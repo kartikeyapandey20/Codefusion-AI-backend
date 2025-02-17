@@ -11,6 +11,8 @@ class User(Base):
     name = Column(String, nullable=False)
     email = Column(String, nullable=False,unique=True)
     password = Column(String, nullable=False)
+    bio = Column(String, nullable=True)
+    avatar_url = Column(String, nullable=True)
     contact_no = Column(String, nullable=False, unique=True)
     created_at = Column(TIMESTAMP(timezone=True),
                         nullable=False, server_default=text('now()'))
