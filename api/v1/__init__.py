@@ -10,4 +10,4 @@ api_router.include_router(news_router)
 
 @api_router.get("/")
 def index():
-	return {"status": "ok"}
+	return {"status": "welcome to codefusion ai"}
