@@ -91,6 +91,7 @@ pillow==10.3.0
 posthog==3.5.0
 proto-plus==1.23.0
 protobuf==4.25.3
+psycopg2-binary==2.9.9
 pulsar-client==3.4.0
 pyasn1==0.6.0
 pyasn1_modules==0.4.0
