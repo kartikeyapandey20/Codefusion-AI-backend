@@ -1,6 +1,8 @@
-from fastapi import FastAPI 
+import logging
+from fastapi import FastAPI , Request
 from api.v1 import api_router
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.responses import JSONResponse
 
 # Create a FastAPI application instance
 app = FastAPI()
@@ -19,6 +21,11 @@ app.add_middleware(
     allow_methods=["*"],           # Allow all HTTP methods
     allow_headers=["*"],           # Allow all headers in requests
 )
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    logging.error(f"🔥 Unhandled error: {exc}", exc_info=True)  # Logs full traceback
+    return JSONResponse(content={"error": str(exc)}, status_code=500)
 
 # Define a route for the root endpoint
 @app.get("/")

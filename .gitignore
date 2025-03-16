@@ -1,7 +1,9 @@
 /venv/
 .env
-/notebook/
-
+/notebooks/
+gemini_question_generator.py
+generated_questions.pkl
+question_history.pkl
 # Ignore all __pycache__ directories
 __pycache__/
 **/__pycache__/

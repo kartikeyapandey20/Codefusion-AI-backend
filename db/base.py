@@ -4,8 +4,8 @@
 # imported by Alembic
 
 from .database import Base
-from api.v1.users.model import User
-from api.v1.chat.model import UserResponse , AiResponse , Chat
-
-
+import api.v1.question.model  
+import api.v1.users.model
+import api.v1.chat.model
+import api.v1.news.model
 

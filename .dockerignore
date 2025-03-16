@@ -1,2 +1,6 @@
 venv/
 .env
+/notebooks/
+gemini_question_generator.py
+generated_questions.pkl
+question_history.pkl
