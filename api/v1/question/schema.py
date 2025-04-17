@@ -2,10 +2,12 @@ from typing import List, Optional
 from pydantic import BaseModel, Field
 
 class QuestionExample(BaseModel):
+    id: int 
     input: dict
     output: int
 
 class QuestionTestCase(BaseModel):
+    id: int 
     input: dict
     exp_output: int
 class QuestionConstraint(BaseModel):
